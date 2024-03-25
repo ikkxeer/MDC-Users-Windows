@@ -1,4 +1,12 @@
-﻿Add-Type -AssemblyName System.Windows.Forms
+# Elevation to administrator in case he is not
+if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))  
+{  
+  $arguments = "& '" +$myinvocation.mycommand.definition + "'"
+  Start-Process powershell.exe -Verb runAs -ArgumentList $arguments
+  Break
+}
+
+Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
 # Crear una ventana
