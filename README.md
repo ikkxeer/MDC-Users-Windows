@@ -1,4 +1,7 @@
-# MDC-Users-Windows
+<div align="center">
+  <img src="https://github.com/ikkxeer/MDC-Users-Windows/assets/137718457/32abddcc-0084-40f8-be76-22a04b982115" alt="MDC Logo" width="200" height="200">
+</div>
+<h1 align="center">MDC-Users-Windows</h1>
 This PowerShell script creates a graphical user interface (GUI) for managing local users on a Windows system. With this GUI, you can view, modify, create, and delete local user accounts easily.
 
 ## Instructions
